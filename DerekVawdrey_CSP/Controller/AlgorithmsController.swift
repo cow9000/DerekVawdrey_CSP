@@ -10,6 +10,49 @@ import UIKit
 
 class AlgorithmsController: UIViewController {
 
+    @IBOutlet weak var algorithmText: UILabel!
+    
+    private func setupAlgorithm() -> Void {
+        var algorithmSteps : [String] = []
+        
+        let algorithm : String = "These are the instrucitons to create a project in Java using Eclipse\n"
+        let stepOne : String = "First, create a Java Project in Eclipse"
+        let stepTwo : String = "Second, create a package named 'project.controller'"
+        let stepThree : String = "Third, Create a package named ‘project.view’"
+        let stepFour : String = "Fourth, Create a package named ‘project.model’"
+        let stepFive : String = "Fifth, inside the ‘project.controller’ package create a java file named ‘ProjectRunner’"
+        let stepSix : String = "Sixth, write code inside ‘ProjectRunner’"
+        let stepSeven : String = "Seventh, inside the ‘project.controller’ package create a java file named ‘ProjectController’"
+        let stepEight : String = "Eighth, write code inside ‘ProjectController’"
+        
+        algorithmSteps = [stepOne, stepTwo, stepThree, stepFour, stepFive, stepSix, stepSeven, stepEight]
+        
+        let attributesDictionary = [NSAttributedStringKey.font : algorithmText.font]
+        let fullAttributedString = NSMutableAttributedString(string: algorithm, attributes: attributesDictionary)
+        
+        for step in algorithmSteps
+        {
+            let bullet : String = "👺"
+            let formattedStep : String = "\n\(bullet) \(step)"
+            let attributedStringStep : NSMutableAttributedString = NSMutableAttributedString(string: formattedStep)
+            let paragraphStyle = createParagraphStyle()
+            attributedStringStep.addAttributes([NSAttributedStringKey.paragraphStyle : paragraphStyle], range: NSMakeRange(0, attributedStringStep.length))
+            
+            fullAttributedString.append(attributedStringStep)
+        }
+        
+        algorithmText.attributedText = fullAttributedString
+        
+    }
+    
+    private func createParagraphStyle() -> NSParagraphStyle {
+        
+        
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
