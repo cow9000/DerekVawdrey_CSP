@@ -41,9 +41,18 @@ class GlobalImpactController: UIViewController {
         
         personalConnection.text = "Since I use electricity, I connect with Atomic Energy. I use the energy it produces every day."
         
-        let region = MKCoordinateRegionMake(CLLocationCoordinate2D(latitude: 40.3037386,longitude: -111.7505579), MKCoordinateSpanMake(250,250))
+        let location = CLLocation(latitude: 40.331106,longitude: -111.755191)
         
-        map.setRegion(region, animated: false)
+        let regionRadius = 100
+        
+        let cordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, CLLocationDistance(regionRadius), CLLocationDistance(regionRadius))
+        
+        let powerPlant = MKPointAnnotation()
+        powerPlant.coordinate = CLLocationCoordinate2D(latitude: 40.331106,longitude: -111.755191)
+        
+        map.addAnnotation(powerPlant)
+        
+        map.setRegion(cordinateRegion, animated: true)
         
         
     }
