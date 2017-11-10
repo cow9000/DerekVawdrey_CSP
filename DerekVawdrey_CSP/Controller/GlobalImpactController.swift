@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
 class GlobalImpactController: UIViewController {
 
@@ -17,6 +19,8 @@ class GlobalImpactController: UIViewController {
     @IBOutlet weak var planForApp: UILabel!
     @IBOutlet weak var addressProblem: UILabel!
     @IBOutlet weak var personalConnection: UILabel!
+    
+    @IBOutlet weak var map: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +40,11 @@ class GlobalImpactController: UIViewController {
         addressProblem.text = "Many people are afraid of Atomic Energy because they view it as dangerous. While it is a dangerous thing if not properly used, its benefits are amazing."
         
         personalConnection.text = "Since I use electricity, I connect with Atomic Energy. I use the energy it produces every day."
+        
+        let region = MKCoordinateRegionMake(CLLocationCoordinate2D(latitude: 40.3037386,longitude: -111.7505579), MKCoordinateSpanMake(250,250))
+        
+        map.setRegion(region, animated: false)
+        
         
     }
 
