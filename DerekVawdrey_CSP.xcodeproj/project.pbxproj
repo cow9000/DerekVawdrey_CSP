@@ -14,6 +14,8 @@
 		710F31971FA25B4E00D961A9 /* ProgrammingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F31961FA25B4E00D961A9 /* ProgrammingController.swift */; };
 		710F31991FA25B6000D961A9 /* InternetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F31981FA25B6000D961A9 /* InternetController.swift */; };
 		710F319B1FA25B6E00D961A9 /* GlobalImpactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F319A1FA25B6E00D961A9 /* GlobalImpactController.swift */; };
+		7139F62B1FC35EDB00A50771 /* Switchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7139F62A1FC35EDB00A50771 /* Switchable.swift */; };
+		7139F62F1FC35FF800A50771 /* Lever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7139F62E1FC35FF800A50771 /* Lever.swift */; };
 		714C3FC41FA2567F00A7F5D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714C3FC31FA2567F00A7F5D5 /* AppDelegate.swift */; };
 		714C3FC61FA2567F00A7F5D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714C3FC51FA2567F00A7F5D5 /* ViewController.swift */; };
 		714C3FC91FA2567F00A7F5D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714C3FC71FA2567F00A7F5D5 /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 		710F31961FA25B4E00D961A9 /* ProgrammingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammingController.swift; sourceTree = "<group>"; };
 		710F31981FA25B6000D961A9 /* InternetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetController.swift; sourceTree = "<group>"; };
 		710F319A1FA25B6E00D961A9 /* GlobalImpactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalImpactController.swift; sourceTree = "<group>"; };
+		7139F62A1FC35EDB00A50771 /* Switchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switchable.swift; sourceTree = "<group>"; };
+		7139F62E1FC35FF800A50771 /* Lever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lever.swift; sourceTree = "<group>"; };
 		714C3FC01FA2567F00A7F5D5 /* DerekVawdrey_CSP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DerekVawdrey_CSP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		714C3FC31FA2567F00A7F5D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		714C3FC51FA2567F00A7F5D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 		714C3FD51FA2568B00A7F5D5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7139F62A1FC35EDB00A50771 /* Switchable.swift */,
+				7139F62E1FC35FF800A50771 /* Lever.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,7 +200,9 @@
 				710F31911FA25B1700D961A9 /* AbstractionController.swift in Sources */,
 				710F31971FA25B4E00D961A9 /* ProgrammingController.swift in Sources */,
 				710F31951FA25B3A00D961A9 /* AlgorithmsController.swift in Sources */,
+				7139F62B1FC35EDB00A50771 /* Switchable.swift in Sources */,
 				710F31931FA25B2A00D961A9 /* DataInformationController.swift in Sources */,
+				7139F62F1FC35FF800A50771 /* Lever.swift in Sources */,
 				710F318F1FA25B0100D961A9 /* CreativityController.swift in Sources */,
 				714C3FC61FA2567F00A7F5D5 /* ViewController.swift in Sources */,
 				714C3FC41FA2567F00A7F5D5 /* AppDelegate.swift in Sources */,

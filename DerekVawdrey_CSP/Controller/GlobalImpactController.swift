@@ -25,6 +25,7 @@ class GlobalImpactController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+       
         // Do any additional setup after loading the view.
     }
 
