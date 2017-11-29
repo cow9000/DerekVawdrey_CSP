@@ -12,7 +12,7 @@
 		710F31931FA25B2A00D961A9 /* DataInformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F31921FA25B2A00D961A9 /* DataInformationController.swift */; };
 		710F31951FA25B3A00D961A9 /* AlgorithmsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F31941FA25B3A00D961A9 /* AlgorithmsController.swift */; };
 		710F31971FA25B4E00D961A9 /* ProgrammingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F31961FA25B4E00D961A9 /* ProgrammingController.swift */; };
-		710F31991FA25B6000D961A9 /* InternetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F31981FA25B6000D961A9 /* InternetController.swift */; };
+		710F31991FA25B6000D961A9 /* InternetMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F31981FA25B6000D961A9 /* InternetMasterViewController.swift */; };
 		710F319B1FA25B6E00D961A9 /* GlobalImpactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F319A1FA25B6E00D961A9 /* GlobalImpactController.swift */; };
 		7139F62B1FC35EDB00A50771 /* Switchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7139F62A1FC35EDB00A50771 /* Switchable.swift */; };
 		7139F62F1FC35FF800A50771 /* Lever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7139F62E1FC35FF800A50771 /* Lever.swift */; };
@@ -22,6 +22,7 @@
 		714C3FCB1FA2567F00A7F5D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 714C3FCA1FA2567F00A7F5D5 /* Assets.xcassets */; };
 		714C3FCE1FA2567F00A7F5D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714C3FCC1FA2567F00A7F5D5 /* LaunchScreen.storyboard */; };
 		71EEDF2D1FCF39A80038CAF7 /* InternetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EEDF2C1FCF39A80038CAF7 /* InternetDetailViewController.swift */; };
+		71EEDF301FCF3BA70038CAF7 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EEDF2F1FCF3BA70038CAF7 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +31,7 @@
 		710F31921FA25B2A00D961A9 /* DataInformationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInformationController.swift; sourceTree = "<group>"; };
 		710F31941FA25B3A00D961A9 /* AlgorithmsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmsController.swift; sourceTree = "<group>"; };
 		710F31961FA25B4E00D961A9 /* ProgrammingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammingController.swift; sourceTree = "<group>"; };
-		710F31981FA25B6000D961A9 /* InternetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetController.swift; sourceTree = "<group>"; };
+		710F31981FA25B6000D961A9 /* InternetMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetMasterViewController.swift; sourceTree = "<group>"; };
 		710F319A1FA25B6E00D961A9 /* GlobalImpactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalImpactController.swift; sourceTree = "<group>"; };
 		7139F62A1FC35EDB00A50771 /* Switchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switchable.swift; sourceTree = "<group>"; };
 		7139F62E1FC35FF800A50771 /* Lever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lever.swift; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 		714C3FCD1FA2567F00A7F5D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		714C3FCF1FA2567F00A7F5D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71EEDF2C1FCF39A80038CAF7 /* InternetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetDetailViewController.swift; sourceTree = "<group>"; };
+		71EEDF2F1FCF3BA70038CAF7 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71EEDF301FCF3BA70038CAF7 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +63,7 @@
 			children = (
 				714C3FC21FA2567F00A7F5D5 /* DerekVawdrey_CSP */,
 				714C3FC11FA2567F00A7F5D5 /* Products */,
+				71EEDF2E1FCF3BA60038CAF7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,7 +105,7 @@
 				710F31921FA25B2A00D961A9 /* DataInformationController.swift */,
 				710F31941FA25B3A00D961A9 /* AlgorithmsController.swift */,
 				710F31961FA25B4E00D961A9 /* ProgrammingController.swift */,
-				710F31981FA25B6000D961A9 /* InternetController.swift */,
+				710F31981FA25B6000D961A9 /* InternetMasterViewController.swift */,
 				710F319A1FA25B6E00D961A9 /* GlobalImpactController.swift */,
 				71EEDF2C1FCF39A80038CAF7 /* InternetDetailViewController.swift */,
 			);
@@ -124,6 +128,14 @@
 				714C3FCC1FA2567F00A7F5D5 /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		71EEDF2E1FCF3BA60038CAF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71EEDF2F1FCF3BA70038CAF7 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				710F319B1FA25B6E00D961A9 /* GlobalImpactController.swift in Sources */,
-				710F31991FA25B6000D961A9 /* InternetController.swift in Sources */,
+				710F31991FA25B6000D961A9 /* InternetMasterViewController.swift in Sources */,
 				710F31911FA25B1700D961A9 /* AbstractionController.swift in Sources */,
 				710F31971FA25B4E00D961A9 /* ProgrammingController.swift in Sources */,
 				71EEDF2D1FCF39A80038CAF7 /* InternetDetailViewController.swift in Sources */,

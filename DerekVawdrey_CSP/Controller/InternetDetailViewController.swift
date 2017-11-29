@@ -13,7 +13,7 @@ public class InternetDetailViewController : UIViewController
 {
     //MARK: GUI Controls
     
-    @IBOutlet weak var textView : UILabel!
+    @IBOutlet weak var textView: UILabel!
     @IBOutlet weak var webViewer : WKWebView!
     
     override public func viewDidLoad(){
