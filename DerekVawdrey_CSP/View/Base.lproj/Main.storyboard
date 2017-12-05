@@ -44,9 +44,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zta-zT-nKg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="89" y="-796"/>
+            <point key="canvasLocation" x="89" y="-725"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Internet Screen-->
         <scene sceneID="Iix-3v-IqI">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="nPk-X9-wNa" customClass="InternetMasterViewController" customModule="DerekVawdrey_CSP" customModuleProvider="target" sceneMemberID="viewController">
@@ -55,13 +55,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseidentifier" id="lUW-n6-zdQ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="lUW-n6-zdQ">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lUW-n6-zdQ" id="jlv-ec-seW">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="QoS-wd-VvZ" kind="showDetail" identifier="showDetail" id="iuE-Gb-r95"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -69,7 +72,7 @@
                             <outlet property="delegate" destination="nPk-X9-wNa" id="p64-pS-btN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="aFS-vY-bXl"/>
+                    <navigationItem key="navigationItem" title="Internet Screen" id="aFS-vY-bXl"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSv-aU-rpY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,9 +150,6 @@
                                 <rect key="frame" x="148" y="503" width="74" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="To Internet"/>
-                                <connections>
-                                    <segue destination="CCo-ON-T2r" kind="show" id="zzc-Jb-laa"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -449,4 +449,7 @@
         <image name="javaCode" width="876" height="628"/>
         <image name="javaSample" width="1126" height="754"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="iuE-Gb-r95"/>
+    </inferredMetricsTieBreakers>
 </document>
