@@ -32,8 +32,8 @@ class InternetMasterViewController: UITableViewController {
             "https://apstudent.collegeboard.org/apcourse/ap-computer-science-principles",
             "http://www.canyonsdistrict.org/",
             "https://ctec.canyonsdistrict.org/",
-            "https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html",
-            "https://twitter.com/"
+            "https://twitter.com/",
+            "https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html"
         ]
         
         if let splitView = splitViewController
