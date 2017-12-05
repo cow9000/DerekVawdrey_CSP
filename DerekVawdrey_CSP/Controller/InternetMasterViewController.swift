@@ -29,12 +29,11 @@ class InternetMasterViewController: UITableViewController {
     private func setup() -> Void{
         
         addresses = [
-            "https://www.google.com",
-            "https://www.google.com",
-            "https://www.google.com",
-            "https://www.google.com",
-            "https://www.google.com",
-            "https://www.google.com"
+            "https://apstudent.collegeboard.org/apcourse/ap-computer-science-principles",
+            "http://www.canyonsdistrict.org/",
+            "https://ctec.canyonsdistrict.org/",
+            "https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html",
+            "https://twitter.com/"
         ]
         
         if let splitView = splitViewController
@@ -63,6 +62,13 @@ class InternetMasterViewController: UITableViewController {
         return internetTopics.count
     }
     
+    override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let currentText = internetTopics[indexPath.row]
+        cell.textLabel!.text = currentText
+        return cell
+    }
+    
     //MARK: Handle the internal transfer
     override public func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier! == "showDetail"{
@@ -73,12 +79,13 @@ class InternetMasterViewController: UITableViewController {
                 if indexPath.row == 0{
                     //TODO: Replace with your definitions - great time to use the """ operator
                     pageText = """
-                    This
-                    a
-                    a
-                    a
-                    a
-                    a
+                    URL - this is an address to a WWW page
+                    
+                    TCP - Transmission Control Protocol is designed to send data over packets in the internet
+                    
+                    IP - Internet Protocol is how data is sent from one computer to another
+                    
+                    DNS - Domain Name Service is a way of identifying IP’s as domain names.
                     """
                     
                     
@@ -97,13 +104,7 @@ class InternetMasterViewController: UITableViewController {
             }
         }
     }
-    
-    override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        let currentText = internetTopics[indexPath.row]
-        cell.textLabel!.text = currentText
-        return cell
-    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

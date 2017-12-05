@@ -16,10 +16,13 @@ public class InternetDetailViewController : UIViewController
     @IBOutlet weak var textView: UILabel!
     @IBOutlet weak var webViewer : WKWebView!
     
+    //MARK: Text properties
     var detailAddress : String?
     {
+        //MARK: 
         didSet
         {
+            
             configureDetailView()
         }
     }
