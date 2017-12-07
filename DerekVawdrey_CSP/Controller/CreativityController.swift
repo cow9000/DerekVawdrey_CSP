@@ -33,6 +33,38 @@ class CreativityController: UICollectionViewController, UICollectionViewDelegate
         
     }()
     
+    var largePhotoIndexPath : IndexPath?
+    {
+        didSet
+        {
+            var indexPaths = [IndexPath]()
+            if let largePhotoIndexPath = largePhotoIndexPath
+            {
+                indexPaths.append(largePhotoIndexPath)
+            }
+            
+            if let oldValue = oldValue{
+                indexPaths.append(oldValue)
+            }
+            
+            collectionView?.performBatchUpdates({
+                collectionView?.reloadItems(at: indexPaths)
+            })
+            {
+                completed in
+                if let largePhotoIndexPath = self.largePhotoIndexPath
+                {
+                    self.collectionView?.scrollToItem(at: largePhotoIndexPath, at: .centeredVertically, animated:true)
+                }
+            }
+            
+        }
+        
+        
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
