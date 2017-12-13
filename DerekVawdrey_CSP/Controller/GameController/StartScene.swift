@@ -11,7 +11,7 @@ import SpriteKit
 
 public class StartScene : SKScene
 {
-    override public func didMove(to view: SKView)
+    override public func didMove(to view: SKView) -> Void
     {
         backgroundColor = UIColor.darkGray
         let startButton = SKSpriteNode(imageNamed: "Death Star")
