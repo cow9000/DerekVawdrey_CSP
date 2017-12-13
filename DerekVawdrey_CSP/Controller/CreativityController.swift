@@ -19,16 +19,10 @@ class CreativityController: UICollectionViewController, UICollectionViewDelegate
     {
      return [
             UIImage(named: "images"),
-            UIImage(named: "otherEnergy"),
-            UIImage(named: "javaCode"),
-            UIImage(named: "otherEnergy"),
-            UIImage(named: "javaCode"),
-            UIImage(named: "otherEnergy"),
-            UIImage(named: "javaCode"),
-            UIImage(named: "otherEnergy"),
-            UIImage(named: "javaCode"),
-            UIImage(named: "otherEnergy"),
-            UIImage(named: "javaCode"),
+            UIImage(named: "atomicEnergy"),
+            UIImage(named: "binarycode"),
+            UIImage(named: "javaSample"),
+            UIImage(named: "otherEnergy")
         ]
         
     }()
@@ -93,6 +87,8 @@ class CreativityController: UICollectionViewController, UICollectionViewDelegate
         artCell.backgroundColor = .purple
         artCell.imageView.image = artSelection[indexPath.row]
         artCell.imageName.text = "My Art"
+        
+        return artCell
     }
     
     //MARK:- Delegate methods
