@@ -11,7 +11,7 @@
 		710F31911FA25B1700D961A9 /* AbstractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F31901FA25B1700D961A9 /* AbstractionController.swift */; };
 		710F31931FA25B2A00D961A9 /* DataInformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F31921FA25B2A00D961A9 /* DataInformationController.swift */; };
 		710F31951FA25B3A00D961A9 /* AlgorithmsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F31941FA25B3A00D961A9 /* AlgorithmsController.swift */; };
-		710F31971FA25B4E00D961A9 /* ProgrammingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F31961FA25B4E00D961A9 /* ProgrammingController.swift */; };
+		710F31971FA25B4E00D961A9 /* ProgrammingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F31961FA25B4E00D961A9 /* ProgrammingViewController.swift */; };
 		710F31991FA25B6000D961A9 /* InternetMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F31981FA25B6000D961A9 /* InternetMasterViewController.swift */; };
 		710F319B1FA25B6E00D961A9 /* GlobalImpactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F319A1FA25B6E00D961A9 /* GlobalImpactController.swift */; };
 		7139F62B1FC35EDB00A50771 /* Switchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7139F62A1FC35EDB00A50771 /* Switchable.swift */; };
@@ -37,6 +37,7 @@
 		71C379471FE1AE1F00CFEDED /* boss sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 71C379421FE1AE1F00CFEDED /* boss sound.mp3 */; };
 		71C379481FE1AE1F00CFEDED /* extra sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 71C379431FE1AE1F00CFEDED /* extra sound.mp3 */; };
 		71C3794B1FE1AF7400CFEDED /* StarField.sks in Resources */ = {isa = PBXBuildFile; fileRef = 71C3794A1FE1AF7400CFEDED /* StarField.sks */; };
+		71C3794D1FE1B47000CFEDED /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C3794C1FE1B47000CFEDED /* Utilities.swift */; };
 		71EEDF2D1FCF39A80038CAF7 /* InternetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EEDF2C1FCF39A80038CAF7 /* InternetDetailViewController.swift */; };
 		71EEDF301FCF3BA70038CAF7 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EEDF2F1FCF3BA70038CAF7 /* WebKit.framework */; };
 /* End PBXBuildFile section */
@@ -46,7 +47,7 @@
 		710F31901FA25B1700D961A9 /* AbstractionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractionController.swift; sourceTree = "<group>"; };
 		710F31921FA25B2A00D961A9 /* DataInformationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInformationController.swift; sourceTree = "<group>"; };
 		710F31941FA25B3A00D961A9 /* AlgorithmsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmsController.swift; sourceTree = "<group>"; };
-		710F31961FA25B4E00D961A9 /* ProgrammingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammingController.swift; sourceTree = "<group>"; };
+		710F31961FA25B4E00D961A9 /* ProgrammingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammingViewController.swift; sourceTree = "<group>"; };
 		710F31981FA25B6000D961A9 /* InternetMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetMasterViewController.swift; sourceTree = "<group>"; };
 		710F319A1FA25B6E00D961A9 /* GlobalImpactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalImpactController.swift; sourceTree = "<group>"; };
 		7139F62A1FC35EDB00A50771 /* Switchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switchable.swift; sourceTree = "<group>"; };
@@ -74,6 +75,7 @@
 		71C379421FE1AE1F00CFEDED /* boss sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "boss sound.mp3"; sourceTree = "<group>"; };
 		71C379431FE1AE1F00CFEDED /* extra sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "extra sound.mp3"; sourceTree = "<group>"; };
 		71C3794A1FE1AF7400CFEDED /* StarField.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StarField.sks; sourceTree = "<group>"; };
+		71C3794C1FE1B47000CFEDED /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		71EEDF2C1FCF39A80038CAF7 /* InternetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetDetailViewController.swift; sourceTree = "<group>"; };
 		71EEDF2F1FCF3BA70038CAF7 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -142,7 +144,7 @@
 				710F31901FA25B1700D961A9 /* AbstractionController.swift */,
 				710F31921FA25B2A00D961A9 /* DataInformationController.swift */,
 				710F31941FA25B3A00D961A9 /* AlgorithmsController.swift */,
-				710F31961FA25B4E00D961A9 /* ProgrammingController.swift */,
+				710F31961FA25B4E00D961A9 /* ProgrammingViewController.swift */,
 				710F31981FA25B6000D961A9 /* InternetMasterViewController.swift */,
 				710F319A1FA25B6E00D961A9 /* GlobalImpactController.swift */,
 				71EEDF2C1FCF39A80038CAF7 /* InternetDetailViewController.swift */,
@@ -154,6 +156,7 @@
 		714C3FD71FA2569600A7F5D5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				71C3794C1FE1B47000CFEDED /* Utilities.swift */,
 				71C379491FE1AE2600CFEDED /* Sounds */,
 				714C3FCA1FA2567F00A7F5D5 /* Assets.xcassets */,
 				714C3FCF1FA2567F00A7F5D5 /* Info.plist */,
@@ -290,8 +293,9 @@
 				710F31991FA25B6000D961A9 /* InternetMasterViewController.swift in Sources */,
 				710F31911FA25B1700D961A9 /* AbstractionController.swift in Sources */,
 				71C379361FE1AC2800CFEDED /* PlayerLaser.swift in Sources */,
-				710F31971FA25B4E00D961A9 /* ProgrammingController.swift in Sources */,
+				710F31971FA25B4E00D961A9 /* ProgrammingViewController.swift in Sources */,
 				71EEDF2D1FCF39A80038CAF7 /* InternetDetailViewController.swift in Sources */,
+				71C3794D1FE1B47000CFEDED /* Utilities.swift in Sources */,
 				71996C501FD72A0800D26E7C /* DrawingView.swift in Sources */,
 				710F31951FA25B3A00D961A9 /* AlgorithmsController.swift in Sources */,
 				7139F62B1FC35EDB00A50771 /* Switchable.swift in Sources */,
