@@ -5,7 +5,6 @@
 //  Created by Cody Henrichsen on 12/6/17.
 //  Copyright © 2017 CTEC. All rights reserved.
 //
-
 import UIKit
 import SpriteKit
 import CoreMotion
@@ -14,7 +13,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
 {
     //MARK: Invader Data
     let rowsOfInvaders : Int = 4
-    var invaderSpeed : Int = 2
+    var invaderSpeed : Int = 2     //change to make the invaders faster or slower
     var invadersThatCanFire : [Invader] = []
     
     //MARK: Player Data
@@ -25,7 +24,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
     var rightBounds : CGFloat = 0
     
     let maxLevels = 3
-    let motionManager: CMMotionManager = CMMotionManager()
+    let motionManager: CMMotionManager = CMMotionManager()      //device is turned for motion so uses motion library
     var accelerationX: CGFloat = 0.0
     
     //MARK:- Game Methods
@@ -37,9 +36,9 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
         {
             for invaderCol in 0..<numberOfInvaders
             {
-                let currentInvader :Invader = Invader()
+                let currentInvader :Invader = Invader()     //current invader is invader
                 let halfWidth : CGFloat = currentInvader.size.width / 2
-                let xPosition : CGFloat = size.width / 2 - halfWidth - (CGFloat(numberOfInvaders) * currentInvader.size.width) + 10
+                let xPosition : CGFloat = size.width - halfWidth - (CGFloat(numberOfInvaders) * currentInvader.size.width) + 10
                 
                 currentInvader.position = CGPoint(x: xPosition + (currentInvader.size.width + CGFloat(10)) * CGFloat(invaderCol - 1), y: CGFloat(self.size.height - CGFloat(invaderRow) * 46))
                 currentInvader.invaderRow = invaderRow
@@ -55,33 +54,54 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
         
         
     }
-
+    
     private func setupPlayer() -> Void
     {
-        player.position = CGPoint(x:self.frame.midX, y:player.size.height/2+10)
+        //Frame or bounds
+        player.position = CGPoint(x:self.frame.midX, y:player.size.height/2 + 10)
         addChild(player)
     }
     
     private func moveInvaders() -> Void
     {
+        
         var changeDirection = false
         enumerateChildNodes(withName: "invader")
         {
             //Closure parameters
             node, stop in
-            
-        }
-        
-        if(changeDirection == true)
-        {
-            self.invaderSpeed *= -1
-            self.enumerateChildNodes(withName: "invader")
+            let invader = node as! SKSpriteNode
+            let invaderHalfWidth = invader.size.width / 2
+            invader.position.x -= CGFloat(self.invaderSpeed)
+            if(invader.position.x > self.rightBounds - invaderHalfWidth || invader.position.x < self.leftBounds + invaderHalfWidth)
             {
-                node, stop in
+                changeDirection = true
+            }
             
+            if(changeDirection)
+            {
+                self.invaderSpeed *= -1 //switching direction
+                self.enumerateChildNodes(withName: "invader")
+                {
+                    node, stop in
+                    let invader = node as! SKSpriteNode
+                    invader.position.y -= CGFloat(10)
+                }
+                changeDirection = false
             }
             
         }
+        
+        //        if(changeDirection == true)
+        //        {
+        //            self.invaderSpeed *= -1
+        //            self.enumerateChildNodes(withName: "invader")
+        //            {
+        //                node, stop in
+        //
+        //            }
+        //
+        //        }
         
     }
     
@@ -92,7 +112,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
     
     func fireInvaderBullet() -> Void
     {
-       
+        
     }
     
     func newGame() -> Void
@@ -123,22 +143,22 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
         setupAccelerometer()
         
     }
-
+    
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) -> Void
     {
-       
+        player.fireBullet(scene: self)
     }
     
     override public func update(_ currentTime: CFTimeInterval) -> Void
     {
-        
+        moveInvaders()
     }
     
     override public func didSimulatePhysics()
     {
         
     }
-
+    
     //MARK:- Handle Motion
     func setupAccelerometer() -> Void
     {
@@ -147,19 +167,20 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
             {
                 (accelerometerData: CMAccelerometerData?, error: Error?)
                 in
-                    let acceleration = accelerometerData!.acceleration
-                    self.accelerationX = CGFloat(acceleration.x)
-                } )
+                let acceleration = accelerometerData!.acceleration
+                self.accelerationX = CGFloat(acceleration.x)
+        } )
     }
     
     
     //MARK:- SKPhysicsContactDelegate method
     
-    func didBeginContact(contact: SKPhysicsContact) -> Void
+    public func didBegin(_ contact: SKPhysicsContact) -> Void
     {
         
         var firstBody: SKPhysicsBody
         var secondBody: SKPhysicsBody
+        
         if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask
         {
             firstBody = contact.bodyA
@@ -169,6 +190,21 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
         {
             firstBody = contact.bodyB
             secondBody = contact.bodyA
+        }
+        
+        if ((firstBody.categoryBitMask & CollisionCategories.Invader != 0) && (secondBody.categoryBitMask & CollisionCategories.PlayerBullet != 0))
+        {
+            print("Invader and Player Bullet Contact")
+        }
+        
+        if ((firstBody.categoryBitMask & CollisionCategories.Player != 0) && (secondBody.categoryBitMask & CollisionCategories.InvaderBullet != 0))
+        {
+            print("Player and Invader Bullet Contact")
+        }
+        
+        if ((firstBody.categoryBitMask & CollisionCategories.Invader != 0) && (secondBody.categoryBitMask & CollisionCategories.Player != 0))
+        {
+            print("Invader and Player Collision Contact")
         }
         
     }
