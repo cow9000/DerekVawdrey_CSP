@@ -223,15 +223,21 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
         if ((firstBody.categoryBitMask & CollisionCategories.Player != 0) && (secondBody.categoryBitMask & CollisionCategories.InvaderLaser != 0))
         {
             print("Player and Invader Bullet Contact")
-            player.die()
         }
         
         if ((firstBody.categoryBitMask & CollisionCategories.Invader != 0) && (secondBody.categoryBitMask & CollisionCategories.Player != 0))
         {
             print("Invader and Player Collision Contact")
-            player.kill()
         }
         
+        if ((firstBody.categoryBitMask & CollisionCategories.Player != 0) && (secondBody.categoryBitMask & CollisionCategories.InvaderLaser != 0))
+        {
+            player.die()
+        }
+        if ((firstBody.categoryBitMask & CollisionCategories.Invader != 0) && (secondBody.categoryBitMask & CollisionCategories.Player != 0))
+        {
+            player.kill()
+        }
         
         if((firstBody.categoryBitMask & CollisionCategories.Invader != 0) && (secondBody.categoryBitMask & CollisionCategories.PlayerLaser != 0)){
             if(contact.bodyA.node?.parent == nil || contact.bodyB.node?.parent == nil){
