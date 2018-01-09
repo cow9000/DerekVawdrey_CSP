@@ -30,12 +30,10 @@ class InternetMasterViewController: UITableViewController {
         
         addresses = [
             "https://apstudent.collegeboard.org/apcourse/ap-computer-science-principles",
-            "http://www.canyonsdistrict.org/",
             "https://ctec.canyonsdistrict.org/",
+            "http://www.canyonsdistrict.org/",
             "https://twitter.com/",
-            "https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html",
-            "https://www.google.com",
-            "https://www.google.com"
+            "https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html"
         ]
         
         if let splitView = splitViewController
@@ -75,8 +73,8 @@ class InternetMasterViewController: UITableViewController {
     override public func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier! == "showDetail"{
             if let indexPath = self.tableView.indexPathForSelectedRow{
-                let urlString = addresses[indexPath.row]
                 let pageText : String
+                var urlString = addresses[indexPath.row]
                 
                 if indexPath.row == 0{
                     //TODO: Replace with your definitions - great time to use the """ operator
@@ -92,6 +90,8 @@ class InternetMasterViewController: UITableViewController {
                     
                     
                 }else{
+                    
+                    urlString = addresses[indexPath.row-1]
                     pageText = internetTopics[indexPath.row]
                 }
                 

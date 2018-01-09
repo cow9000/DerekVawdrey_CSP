@@ -14,6 +14,10 @@
 		710F31971FA25B4E00D961A9 /* ProgrammingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F31961FA25B4E00D961A9 /* ProgrammingViewController.swift */; };
 		710F31991FA25B6000D961A9 /* InternetMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F31981FA25B6000D961A9 /* InternetMasterViewController.swift */; };
 		710F319B1FA25B6E00D961A9 /* GlobalImpactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F319A1FA25B6E00D961A9 /* GlobalImpactController.swift */; };
+		712FB4A22005434600C0178E /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712FB4A12005434600C0178E /* DataViewController.swift */; };
+		712FB4A42005435F00C0178E /* BucketItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712FB4A32005435F00C0178E /* BucketItemCell.swift */; };
+		712FB4A72005438100C0178E /* BucketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712FB4A62005438100C0178E /* BucketItem.swift */; };
+		712FB4A9200543C400C0178E /* bucket.csv in Resources */ = {isa = PBXBuildFile; fileRef = 712FB4A8200543C400C0178E /* bucket.csv */; };
 		7139F62B1FC35EDB00A50771 /* Switchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7139F62A1FC35EDB00A50771 /* Switchable.swift */; };
 		7139F62F1FC35FF800A50771 /* Lever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7139F62E1FC35FF800A50771 /* Lever.swift */; };
 		713E9E381FD9D36000D57B7F /* ArtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713E9E371FD9D36000D57B7F /* ArtCell.swift */; };
@@ -51,6 +55,10 @@
 		710F31961FA25B4E00D961A9 /* ProgrammingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammingViewController.swift; sourceTree = "<group>"; };
 		710F31981FA25B6000D961A9 /* InternetMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetMasterViewController.swift; sourceTree = "<group>"; };
 		710F319A1FA25B6E00D961A9 /* GlobalImpactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalImpactController.swift; sourceTree = "<group>"; };
+		712FB4A12005434600C0178E /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		712FB4A32005435F00C0178E /* BucketItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketItemCell.swift; sourceTree = "<group>"; };
+		712FB4A62005438100C0178E /* BucketItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketItem.swift; sourceTree = "<group>"; };
+		712FB4A8200543C400C0178E /* bucket.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bucket.csv; path = ../../../../Downloads/bucket.csv; sourceTree = "<group>"; };
 		7139F62A1FC35EDB00A50771 /* Switchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switchable.swift; sourceTree = "<group>"; };
 		7139F62E1FC35FF800A50771 /* Lever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lever.swift; sourceTree = "<group>"; };
 		713E9E371FD9D36000D57B7F /* ArtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCell.swift; sourceTree = "<group>"; };
@@ -94,6 +102,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		712FB4A52005436E00C0178E /* DataView */ = {
+			isa = PBXGroup;
+			children = (
+				712FB4A12005434600C0178E /* DataViewController.swift */,
+				712FB4A32005435F00C0178E /* BucketItemCell.swift */,
+			);
+			path = DataView;
+			sourceTree = "<group>";
+		};
 		714C3FB71FA2567F00A7F5D5 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +149,7 @@
 				71C379321FE1AC2800CFEDED /* Projectile.swift */,
 				7139F62A1FC35EDB00A50771 /* Switchable.swift */,
 				7139F62E1FC35FF800A50771 /* Lever.swift */,
+				712FB4A62005438100C0178E /* BucketItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,6 +169,7 @@
 				710F319A1FA25B6E00D961A9 /* GlobalImpactController.swift */,
 				71EEDF2C1FCF39A80038CAF7 /* InternetDetailViewController.swift */,
 				713E9E371FD9D36000D57B7F /* ArtCell.swift */,
+				712FB4A52005436E00C0178E /* DataView */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -158,6 +177,7 @@
 		714C3FD71FA2569600A7F5D5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				712FB4A8200543C400C0178E /* bucket.csv */,
 				71C3794C1FE1B47000CFEDED /* Utilities.swift */,
 				71C379491FE1AE2600CFEDED /* Sounds */,
 				714C3FCA1FA2567F00A7F5D5 /* Assets.xcassets */,
@@ -269,6 +289,7 @@
 			files = (
 				714C3FCE1FA2567F00A7F5D5 /* LaunchScreen.storyboard in Resources */,
 				71C379471FE1AE1F00CFEDED /* boss sound.mp3 in Resources */,
+				712FB4A9200543C400C0178E /* bucket.csv in Resources */,
 				71C379481FE1AE1F00CFEDED /* extra sound.mp3 in Resources */,
 				71C379461FE1AE1F00CFEDED /* laser sound.mp3 in Resources */,
 				71C379441FE1AE1F00CFEDED /* invader sound.mp3 in Resources */,
@@ -289,16 +310,19 @@
 				71C3792C1FE1AB0300CFEDED /* GameScene.swift in Sources */,
 				71C379341FE1AC2800CFEDED /* InvaderLaser.swift in Sources */,
 				71C3792E1FE1AB0300CFEDED /* StartScene.swift in Sources */,
+				712FB4A72005438100C0178E /* BucketItem.swift in Sources */,
 				71C379381FE1AC2800CFEDED /* Invader.swift in Sources */,
 				710F319B1FA25B6E00D961A9 /* GlobalImpactController.swift in Sources */,
 				71C3792D1FE1AB0300CFEDED /* LevelCompleteScene.swift in Sources */,
 				713E9E381FD9D36000D57B7F /* ArtCell.swift in Sources */,
+				712FB4A22005434600C0178E /* DataViewController.swift in Sources */,
 				710F31991FA25B6000D961A9 /* InternetMasterViewController.swift in Sources */,
 				710F31911FA25B1700D961A9 /* AbstractionController.swift in Sources */,
 				71C379361FE1AC2800CFEDED /* PlayerLaser.swift in Sources */,
 				710F31971FA25B4E00D961A9 /* ProgrammingViewController.swift in Sources */,
 				71EEDF2D1FCF39A80038CAF7 /* InternetDetailViewController.swift in Sources */,
 				71C3794D1FE1B47000CFEDED /* Utilities.swift in Sources */,
+				712FB4A42005435F00C0178E /* BucketItemCell.swift in Sources */,
 				71996C501FD72A0800D26E7C /* DrawingView.swift in Sources */,
 				710F31951FA25B3A00D961A9 /* AlgorithmsController.swift in Sources */,
 				7139F62B1FC35EDB00A50771 /* Switchable.swift in Sources */,
